@@ -6,10 +6,10 @@ $('.spoiler').append($button);
 // Hide spoiler text 
 $('.spoiler span').hide();
 // When button is pressed 
-$('.spoiler').on('click', 'button', () => {
+$('.spoiler').on('click', 'button', (event) => {
   // Show the spoiler text
-  $('.spoiler span').fadeIn(1000);
+  $(event.target).prev().fadeIn(1000);
   // Hide the Reveal Button
-  $('.spoiler button').hide();
+  $(event.target).hide();
 });
  
